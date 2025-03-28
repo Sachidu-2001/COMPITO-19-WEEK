@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebAppEsame.Models
 {
@@ -8,7 +9,12 @@ namespace WebAppEsame.Models
         public string Titolo { get; set; }
         public DateTime Data {  get; set; }
         public string Luogo {  get; set; }
-        [ForeignKey(nameof(Artista))]
-        public int Artista { get; set; }
+
+        [Required]
+        public int ArtistaId { get; set; }
+        [ForeignKey(nameof(ArtistaId))]
+        public Artista Artista { get; set; }
+
+        public ICollection<Biglietto> Biglietti { get; set; } = new List<Biglietto>();
     }
 }

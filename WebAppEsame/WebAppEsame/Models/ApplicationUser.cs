@@ -10,7 +10,8 @@ namespace WebAppEsame.Models
         [Required]
         public DateOnly BirthDate { get; set; }
 
-        public ICollection<>
+        public ICollection<ApplicationUserRole> ApplicationUserRoles { get; set; } = new List<ApplicationUserRole>();
+        public ICollection<Artista> Artisti { get; set; } = new List<Artista>();
     }
 
 }

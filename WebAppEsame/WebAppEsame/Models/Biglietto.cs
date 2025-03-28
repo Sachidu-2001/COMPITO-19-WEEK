@@ -7,6 +7,6 @@ namespace WebAppEsame.Models
         public int BigliettoId { get; set; }
         [ForeignKey(nameof(Evento))]
         public int Evento { get; set; }
-        public DateTime DataAcquisto
+        public DateTime DataAcquisto { get; set; }
     }
 }
