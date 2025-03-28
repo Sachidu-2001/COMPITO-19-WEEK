@@ -12,6 +12,7 @@ namespace WebAppEsame.Models
 
         public ICollection<ApplicationUserRole> ApplicationUserRoles { get; set; } = new List<ApplicationUserRole>();
         public ICollection<Artista> Artisti { get; set; } = new List<Artista>();
+        public ICollection<Biglietto> Biglietti { get; set; } = new List<Biglietto>();
     }
 
 }
